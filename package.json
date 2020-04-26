@@ -4,11 +4,18 @@
   "description": "",
   "main": "jest_expect_profile.test.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^25.4.0",
+    "jest-expect-message": "^1.0.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-expect-message"
+    ],
+    "testEnvironment": "node"
   }
 }
